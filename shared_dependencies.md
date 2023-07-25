@@ -1,15 +1,30 @@
 Shared Dependencies:
 
-1. **Data Schemas**: All files will share a common data schema for the drop shipping data, which includes fields like product listings, customer orders, and supplier information. This schema will be used to structure the data for analysis.
+1. **Exported Variables**: 
+   - `data`: The cleaned and preprocessed data from `data_collection_preprocessing.py` will be used in `machine_learning_models.py`, `decision_making_item_selection.py`, and `real_time_data_integration.py`.
+   - `model`: The trained machine learning model from `machine_learning_models.py` will be used in `decision_making_item_selection.py`.
+   - `selected_items`: The selected items for drop shipping from `decision_making_item_selection.py` will be used in `user_interface.py` and `main.py`.
 
-2. **Exported Variables**: The machine learning models and NLU techniques will generate outputs that will be used across multiple files. For example, the output of the machine learning model in "machine_learning_models.py" will be used in "decision_making_item_selection.py" for item selection.
+2. **Data Schemas**: 
+   - `product_schema`: Used in `data_collection_preprocessing.py`, `machine_learning_models.py`, `decision_making_item_selection.py`, and `real_time_data_integration.py` to structure product data.
+   - `user_schema`: Used in `user_interface.py` and `main.py` to structure user data.
 
-3. **Function Names**: Functions for data preprocessing, NLU, machine learning, decision making, data integration, and UI integration will be used across multiple files. These functions will be named according to their functionality, like preprocess_data(), understand_language(), train_model(), make_decision(), integrate_data(), and integrate_UI().
+3. **DOM Element IDs**: 
+   - `login-form`: Used in `login.html` and `main.js` for user login.
+   - `register-form`: Used in `register.html` and `main.js` for user registration.
+   - `dashboard`: Used in `dashboard.html` and `main.js` to display selected items for drop shipping.
+   - `item-selection`: Used in `dashboard.html` and `main.js` for user to provide item selection instructions.
 
-4. **Message Names**: Messages for user interaction in the UI, such as instructions for item selection and updates on the AI agent's actions, will be used in "user_interface_integration.py" and "deployment.py". These messages will be named according to their purpose, like instruction_message and update_message.
+4. **Message Names**: 
+   - `login_success`: Used in `user_interface.py` and `main.js` to notify successful user login.
+   - `register_success`: Used in `user_interface.py` and `main.js` to notify successful user registration.
+   - `item_selection_success`: Used in `user_interface.py` and `main.js` to notify successful item selection.
 
-5. **DOM Element IDs**: The UI will have various DOM elements that JavaScript functions will interact with. These elements will have IDs like "itemSelectionInput" for user input on item selection, "actionMonitor" for monitoring the AI agent's actions, and "updateDisplay" for displaying updates.
-
-6. **APIs**: APIs for data collection and real-time data integration will be used in "data_collection_preprocessing.py" and "real_time_data_integration.py". These APIs will be named according to the data they provide, like product_listing_API, customer_order_API, and supplier_info_API.
-
-7. **Web Scraping Techniques**: Web scraping techniques will be used in "data_collection_preprocessing.py" and "real_time_data_integration.py" for collecting data from various sources. These techniques will be named according to the data they scrape, like scrape_product_listings(), scrape_customer_orders(), and scrape_supplier_info().
+5. **Function Names**: 
+   - `collect_data()`: Used in `data_collection_preprocessing.py` and `main.py` to collect drop shipping data.
+   - `preprocess_data()`: Used in `data_collection_preprocessing.py` and `main.py` to preprocess collected data.
+   - `train_model()`: Used in `machine_learning_models.py` and `main.py` to train machine learning model.
+   - `select_items()`: Used in `decision_making_item_selection.py` and `main.py` to select items for drop shipping.
+   - `update_data()`: Used in `real_time_data_integration.py` and `main.py` to update drop shipping data in real-time.
+   - `login()`, `register()`: Used in `user_interface.py` and `main.py` for user login and registration.
+   - `display_dashboard()`: Used in `user_interface.py` and `main.py` to display user dashboard.

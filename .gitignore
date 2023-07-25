@@ -1,0 +1,45 @@
+# .gitignore
+
+# Ignore Python build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore all log files
+*.log
+
+# Ignore data files
+*.csv
+*.json
+
+# Ignore model files
+*.h5
+
+# Ignore Flask file uploads
+uploads/
+
+# Ignore virtual environment
+venv/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+
+# Ignore Jupyter Notebook files
+*.ipynb
+
+# Ignore Mac system files
+.DS_Store
+
+# Ignore Heroku files
+*.slugignore
+*.env
+
+# Ignore all SQLite files
+*.sqlite3
+
+# Ignore all pycache
+**/__pycache__/
+
+# Ignore all .pyc files
+**/*.pyc
